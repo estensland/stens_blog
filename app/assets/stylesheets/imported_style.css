@@ -1,0 +1,154 @@
+html {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: #344EC2;
+  text-decoration: none;
+}
+
+a:hover{
+  color: red;
+  text-decoration: underline;
+}
+
+h1, h2{
+  display: inline;
+  margin-right: .5em;
+  font-family: 'Denk One', Helvetica, arial, freesans, clean, sans-serif;
+}
+
+img{
+  border-radius: 10em;
+  display: block;
+  float:right;
+  height: 9em;
+  margin-right: 10%;
+  margin-top: -1.25em;
+}
+
+.content{
+  margin-top: 8.6em;
+}
+
+.content .text_pane{
+  background-color: #eee;
+  border: 1px solid black;
+  border-radius: .5em;
+  margin: 1em auto;
+  margin-bottom: 1em;
+  width: 50%;
+}
+
+.content div p, .content div h3{
+  line-height: 20px;
+  margin-left: .5em;
+}
+
+.content .sub_content{
+  margin-top: -8.5em;
+  padding-top: 8.5em;
+}
+
+.links{
+  background-color: black;
+  padding-top: .3em;
+}
+
+.icons {
+  text-align: center;
+}
+
+.icons a{
+  padding: 0 1em;
+}
+
+.nav {
+  height: 60px;  
+  position: fixed;
+  text-align: right;
+  top:0;
+  width: 100%;
+}
+
+.nav h4{
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.nav h4 a{
+  padding: 0 .5em;
+}
+
+.nav a:hover{
+  color: red;
+}
+
+.nav a{
+  color: white;
+  display: inline;
+  margin-top: 0;
+  text-align: center;
+}
+
+.top-bar {
+  background-color: black;
+  display: block;
+  height: 6.5em;
+  right: 0;
+  top:0;
+  width: 100%;
+}
+
+.title_text {
+  color: white;
+  display: inline;
+  margin-top: 0;
+  text-align: center;
+}
+
+.white_space {
+  background-color: white;
+  height: 2em;
+  width: 100%;
+}
+
+@media (max-width: 850px){
+  .content .text_pane{
+    width: 65%;
+  }
+}
+
+@media (max-width: 750px){
+  .content .text_pane{
+    width: 75%;
+  }
+}
+
+@media (max-width: 588px){
+  .content{
+    margin-top: 11.5em;
+  }
+  .content .text_pane{
+    width: 85%;
+  }
+
+  .top-bar {
+    height: 9.5em;
+  }
+}
+
+@media (max-width: 421px){
+  .content{
+    margin-top: 14em;
+  }
+
+  .content .text_pane{
+    width: 98%;
+  }
+
+.top-bar {
+  height: 12em;
+  }

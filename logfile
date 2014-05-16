@@ -1,0 +1,30 @@
+LOG:  database system was shut down at 2014-04-16 07:05:23 CDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+FATAL:  role "ericrstensland" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-04-25 12:34:23 CDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  database "ericrstensland_development" already exists
+STATEMENT:  CREATE DATABASE "ericrstensland_development" ENCODING = 'unicode'
+ERROR:  database "ericrstensland_test" already exists
+STATEMENT:  CREATE DATABASE "ericrstensland_test" ENCODING = 'unicode'

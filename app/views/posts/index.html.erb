@@ -1,0 +1,17 @@
+<div class="body_container">
+  <h3 class="body_header">Recent Posts</h3>
+  <% @posts.each do |post| %>
+    <div class="post_container">
+      <p class="created_date"><%= post.created_to_s %></p>
+      <% if post.tags.first %> 
+        <p class="post_tags"><span>Tags:</span> 
+          <% post.tags.each do |tag| %>
+            <a href="/show/tag/<%=tag.id%>"><%=tag.name%></a>
+          <% end %>
+        </p>     
+      <% end %>
+      <p class="post_title"><a href="/show/post/<%= post.id %>"><%= post.title %></a></p>
+      <p class="post_content"><%= post.content.html_safe %></p>
+    </div>
+  <% end %>
+</div>

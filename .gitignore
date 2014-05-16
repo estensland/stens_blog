@@ -16,4 +16,4 @@
 /tmp
 
 /vender/ruby
-/app/assests/images/.DS_store
+*/.DS_store

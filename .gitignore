@@ -15,5 +15,5 @@
 /log/*.log
 /tmp
 
-/vendor/ruby
+vendor/ruby/
 ~/.DS_store

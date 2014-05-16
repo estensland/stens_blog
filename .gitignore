@@ -16,4 +16,4 @@
 /tmp
 
 /vender/ruby
-*/.DS_store
+~/.DS_store

@@ -5,6 +5,9 @@ Ericrstensland::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  get 'posts' => 'posts#index'
+  get 'posts/:id' => 'posts#show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

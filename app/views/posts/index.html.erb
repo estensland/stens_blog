@@ -6,12 +6,12 @@
       <% if post.tags.first %> 
         <p class="post_tags"><span>Tags:</span> 
           <% post.tags.each do |tag| %>
-            <a href="/show/tag/<%=tag.id%>"><%=tag.name%></a>
+            <a href="/tags/<%=tag.id%>"><%=tag.name%></a>
           <% end %>
         </p>     
       <% end %>
-      <p class="post_title"><a href="/show/post/<%= post.id %>"><%= post.title %></a></p>
-      <p class="post_content"><%= post.content.html_safe %></p>
+      <p class="post_title"><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
+      <p class="post_content"><%= post.body.html_safe %></p>
     </div>
   <% end %>
 </div>

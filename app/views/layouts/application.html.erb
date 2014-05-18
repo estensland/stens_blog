@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<navbar class="nav">
+      <div class="white_space"></div>
+      <div class="top-bar">
+        <div class="title">
+          <div class="title_text">
+            <h1>Eric Stensland</h1>
+            <%= image_tag "Eric_smaller.jpg" %>
+            <br>
+            <h2>Web Developer</h2>
+            <br>
+            <h4 class="links">
+              <a href="#about">About</a> |
+              <a href="#past">
+                The Road So Far</a> | 
+              <a href="#find_out_more">Find Out More</a>
+            </h4>
+           </div>
+         </div>
+      </div>
+    </navbar>
+      
+    <div class="content">
+    <%= yield %>
+    </div>
+    
 </body>
 </html>

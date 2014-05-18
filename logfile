@@ -28,3 +28,13 @@ ERROR:  database "ericrstensland_development" already exists
 STATEMENT:  CREATE DATABASE "ericrstensland_development" ENCODING = 'unicode'
 ERROR:  database "ericrstensland_test" already exists
 STATEMENT:  CREATE DATABASE "ericrstensland_test" ENCODING = 'unicode'
+FATAL:  terminating autovacuum process due to administrator command
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-05-16 09:48:05 CDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  relation "tags" already exists
+STATEMENT:  CREATE TABLE "tags" ("id" serial primary key, "post_id" integer, "tag_id" integer, "created_at" timestamp, "updated_at" timestamp) 

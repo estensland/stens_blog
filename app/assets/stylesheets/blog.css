@@ -1,0 +1,9 @@
+.created_date {
+  float: right;
+  padding-right: .5em;
+}
+
+.post_title {
+  font-size: 120%;
+
+}

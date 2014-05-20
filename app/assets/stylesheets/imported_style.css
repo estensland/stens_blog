@@ -41,9 +41,11 @@ img{
   background-color: #eee;
   border: 1px solid black;
   border-radius: .5em;
+  line-height: 125%;
   margin: 1em auto;
   margin-bottom: 1em;
-  width: 50%;
+  padding-right: .5em;
+  width: 65%;
 }
 
 .content div p, .content div h3{
@@ -121,7 +123,7 @@ img{
 
 @media (max-width: 850px){
   .content .text_pane{
-    width: 65%;
+    width: 70%;
   }
 }
 

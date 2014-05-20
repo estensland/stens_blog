@@ -1,15 +1,14 @@
 <div class="body_container">
-  <h3 class="body_header">Recent Posts</h3>
-    <div class="post_container">
-      <p class="created_date"><%= @post.created_to_s %></p>
-      <% if @post.tags.first %> 
-        <p class="post_tags"><span>Tags:</span> 
-          <% @post.tags.each do |tag| %>
-            <a href="/tags/<%=tag.id%>"><%=tag.name%></a>
-          <% end %>
-        </p>     
-      <% end %>
-      <p class="post_title"><%= @post.title %></p>
-      <p class="post_content"><%= @post.body.html_safe %></p>
-    </div>
+  <div class="post_container">
+    <p class="created_date"><%= @post.created_to_s %></p>
+    <% if @post.tags.first %> 
+      <p class="post_tags"><span>Tags:</span> 
+        <% @post.tags.each do |tag| %>
+          <a href="/tags/<%=tag.id%>"><%=tag.name%></a>
+        <% end %>
+      </p>     
+    <% end %>
+    <p class="post_title"><%= @post.title %></p>
+    <p class="post_content"><%= @post.body.html_safe %></p>
+  </div>
 </div>

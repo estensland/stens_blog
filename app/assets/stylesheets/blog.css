@@ -1,3 +1,9 @@
+.body_header{
+  font-size: 170%;
+  padding: .5em;
+  padding-top: 1em;
+}
+
 .created_date {
   float: right;
   padding-right: .5em;
@@ -5,7 +11,6 @@
 
 .post_title {
   font-size: 190%;
-
 }
 
 .text_pane{

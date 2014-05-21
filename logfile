@@ -38,3 +38,10 @@ LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
 ERROR:  relation "tags" already exists
 STATEMENT:  CREATE TABLE "tags" ("id" serial primary key, "post_id" integer, "tag_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-05-19 21:25:42 CDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

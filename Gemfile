@@ -34,6 +34,8 @@ gem 'will_paginate', '~> 3.0'
 gem 'devise'
 
 
+gem 'font-awesome-rails'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'

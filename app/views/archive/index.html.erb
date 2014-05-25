@@ -1,0 +1,8 @@
+<h3 class="body_header center">Achives:</h3>
+<div class="body_container">
+  <% @posts.each do |post| %>
+    <div class="post_container text_pane">
+      <p class="tag_name"><a href="/posts/<%= post.id %>"><%= post.title %></a> <span class="post_time"><%= post.created_to_s %></span></p>
+    </div>
+  <% end %>
+</div>

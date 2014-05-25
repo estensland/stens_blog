@@ -1,3 +1,4 @@
+<h3 class="body_header center"><%= @post.title %></h3>
 <div class="body_container">
   <div class="post_container text_pane">
     <p class="created_date"><%= @post.created_to_s %></p>
@@ -8,7 +9,6 @@
         <% end %>
       </p>     
     <% end %>
-    <p class="post_title"><%= @post.title %></p>
     <p class="post_content"><%= @post.body.html_safe %></p>
   </div>
 </div>

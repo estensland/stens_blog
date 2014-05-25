@@ -11,6 +11,11 @@ Ericrstensland::Application.routes.draw do
   get 'posts' => 'posts#index'
   get 'posts/:id' => 'posts#show'
 
+  get 'archive' => 'archive#index'
+
+  get 'tags' => 'tags#index'
+  get 'tags/:id' => 'tags#show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

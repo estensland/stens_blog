@@ -1,0 +1,8 @@
+<h3 class="body_header center">Tags:</h3>
+<div class="body_container">
+  <% @tags.each do |tag| %>
+    <div class="post_container text_pane">
+      <p class="tag_name"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></p>
+    </div>
+  <% end %>
+</div>

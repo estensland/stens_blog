@@ -59,3 +59,10 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2014-05-22 22:10:02 CDT
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-05-25 12:20:49 CDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

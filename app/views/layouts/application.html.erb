@@ -30,14 +30,15 @@
        </div>
     </div>
   </navbar>
+  <div class="content">
 <% else %>
   <navbar class="nav">
-    <div class="white_space"></div>
+    <div class="white_space blog_space"></div>
     <div class="top-bar blog">
       <div class="title">
         <div class="title_text">
           <h4 class="links">
-            <a href="/posts">Eric Stensland</a>|
+            <a href="/posts">Home</a>|
             <a href="/posts">Recent Posts</a>|
             <a href="/archive">Archive</a>|
             <a href="/tags"> Tags</a>
@@ -46,9 +47,10 @@
        </div>
     </div>
   </navbar>
-  <h1>Eric Stensland</h1>
+  <h1 class="name_blog">Eric Stensland's River of Consciousness</h1>
+  <div class="content blog_content">
 <% end %>      
-    <div class="content">
+    
     <%= yield %>
     </div>
     

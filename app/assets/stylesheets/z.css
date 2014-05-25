@@ -1,17 +1,27 @@
 .blog {
   padding-top: .5em;
-  height: 80%;
+  height: 53%;
+}
+
+.blog_content {
+  padding: 0;
+  margin: 0;
 }
 
 
-
-.blog h1{
-  float: left;
-  margin-top: 0;
-  margin-left: 40%;
+.name_blog {
+  display: block;
+  text-align: center;
+  color: black;
+  margin-top: 2.9em;
+  margin-bottom: 0;
 }
 
-@media (max-width: 890px){
+.blog_space {
+  height: 10%;
+}
+
+/*@media (max-width: 890px){
   .blog h1{
     padding-top: .2em;
     margin-left: 0;
@@ -30,4 +40,4 @@
     float: leftg;
     top: 5em;
   }
-}
+}*/

@@ -10,9 +10,26 @@
 }
 
 .post_title {
-  font-size: 190%;
+  text-align: center;
+  font-size: 140%;
 }
 
 .post_time {
   float: right;
+}
+
+.post_tags{
+  color: #222;
+  font-size: 101%;
+  padding-bottom: .2em;
+  border-bottom: 1px solid black;
+}
+
+.post_tags a{
+  color: #AB0303;
+}
+
+
+.post_tags a:hover{
+  color: red;
 }

@@ -3,12 +3,31 @@
   height: 80%;
 }
 
-.blog .title_text{
-  height: 80%;
-}
+
 
 .blog h1{
   float: left;
   margin-top: 0;
   margin-left: 40%;
+}
+
+@media (max-width: 890px){
+  .blog h1{
+    padding-top: .2em;
+    margin-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0; 
+  }
+  
+  .blog {
+    display: block;
+    height: 150%;
+  }
+
+  .title_text .links{
+    position: absolute;
+    left: 0;
+    float: leftg;
+    top: 5em;
+  }
 }

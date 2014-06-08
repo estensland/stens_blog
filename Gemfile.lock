@@ -178,7 +178,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 1.2)
   jquery-rails
-  pg
+  pg (= 0.17.1)
   pry
   pry-nav
   rails (= 4.0.4)

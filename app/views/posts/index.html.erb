@@ -4,9 +4,9 @@
     <div class="post_container text_pane">
       <p class="created_date"><%= post.created_to_s %></p>
       <% if post.tags.first %> 
-        <p class="post_tags"><span>Tags:</span> 
+        <p class="post_tags"><span>Tags:</span> |
           <% post.tags.each do |tag| %>
-            <a href="/tags/<%=tag.id%>"><%=tag.name%></a>
+            <a href="/tags/<%=tag.id%>"><%=tag.name%></a> |
           <% end %>
         </p>     
       <% end %>

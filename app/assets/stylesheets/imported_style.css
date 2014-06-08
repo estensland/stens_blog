@@ -133,9 +133,15 @@ img{
   }
 }
 
+@media (max-width: 815px){
+  .content {
+    margin-top: 8.8em;
+  }
+}
+
 @media (max-width: 515px){
   .content{
-    margin-top: 11.5em;
+    margin-top: 10.3em;
   }
   .content .text_pane{
     width: 85%;
@@ -153,7 +159,7 @@ img{
 
 @media (max-width: 432px){
   .content{
-    margin-top: 14em;
+    margin-top: 10.3em;
   }
 
   .content .text_pane{

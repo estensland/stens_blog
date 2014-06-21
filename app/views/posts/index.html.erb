@@ -2,7 +2,9 @@
 <div class="body_container">
   <% @posts.each do |post| %>
     <div class="post_container text_pane">
-      <p class="post_title"><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
+      <div class="post_title_bar">
+        <a href="/posts/<%= post.id %>"><%= post.title %></a>
+      </div>
       <div class="post_header">
         <% if post.tags.first %> 
           <p class="post_tags"><span>Tags:</span> |

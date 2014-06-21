@@ -21,7 +21,10 @@
 .post_title {
   text-align: center;
   font-size: 140%;
+  margin: 0;
+  padding: 0;
 }
+
 
 .post_time {
   float: right;
@@ -41,4 +44,19 @@
 
 .post_tags a:hover{
   color: red;
+}
+
+.post_title_bar {
+  background-color: black;
+  border-top-right-radius: .4em;
+  border-top-left-radius: .4em;
+  margin: 0;
+  padding: 1em 0;
+  padding-right: .5em;
+  width:100%;
+  text-align: center;
+}
+.post_title_bar a {
+  font-size: 150%;
+  color: white;
 }

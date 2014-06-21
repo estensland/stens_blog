@@ -1,14 +1,20 @@
-<h3 class="body_header center"><%= @post.title %></h3>
 <div class="body_container">
+  <br>
+  <br>
   <div class="post_container text_pane">
-    <p class="created_date"><%= @post.created_to_s %></p>
-    <% if @post.tags.first %> 
-      <p class="post_tags"><span>Tags:</span> | 
-        <% @post.tags.each do |tag| %>
-          <a href="/tags/<%=tag.id%>"><%=tag.name%></a> |
-        <% end %>
-      </p>     
-    <% end %>
+    <div class="post_title_bar">
+      <a href="/posts/<%= @post.id %>"><%= @post.title %></a>
+    </div>
+    <div class="post_header">
+      <% if @post.tags.first %> 
+        <p class="post_tags"><span>Tags:</span> |
+          <% @post.tags.each do |tag| %>
+            <a href="/tags/<%=tag.id%>"><%=tag.name%></a> |
+          <% end %>
+        </p>     
+      <% end %>
+      <p class="created_date"><%= @post.created_to_s %></p>
+    </div>
     <p class="post_content"><%= @post.body.html_safe %></p>
   </div>
 </div>

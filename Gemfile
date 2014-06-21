@@ -43,6 +43,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem "factory_girl_rails", "~> 4.0"
   gem 'coveralls', require: false
+  gem 'xray-rails'
 end
 
 group :production do 

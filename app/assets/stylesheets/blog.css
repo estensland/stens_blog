@@ -39,7 +39,6 @@
   padding: 0;
 }
 
-
 .post_time {
   float: right;
 }
@@ -47,21 +46,20 @@
 .post_tags{
   display: inline-block;
   width: 55%;
-  color: #222;
+  color: white;
   font-size: 101%;
 }
 
 .post_tags a{
-  color: #AB0303;
+  color: white;
 }
-
 
 .post_tags a:hover{
   color: red;
 }
 
 .post_title_bar {
-  background-color: black;
+  background-color: #344EC2;
   border-top-right-radius: .4em;
   border-top-left-radius: .4em;
   margin: 0;
@@ -73,4 +71,9 @@
 .post_title_bar a {
   font-size: 150%;
   color: white;
+}
+
+.tag_list {
+  text-align: center;
+  font-size: 120%;
 }

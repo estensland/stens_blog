@@ -4,11 +4,25 @@
   padding-top: .3em;
 }
 
+.created_date{
+  color: white;
+}
+
 .post_header{
-  padding-bottom: .2em;
+  background-color: black;
+  padding-top: .3em;
+  padding-bottom: .3em;
   padding-right: .5em;
   border-bottom: 1px solid black;
   width: 100%;
+}
+
+.post_header p {
+  margin: 0;
+}
+
+.post_header a {
+  color: white;
 }
 
 .created_date {

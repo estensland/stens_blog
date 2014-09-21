@@ -3,6 +3,7 @@ set :application, 'ericrstensland'
 set :repo_url, 'git@github.com:estensland/stens_blog.git'
 
 set :ssh_options, {
+  user: 'estensland',
   port: 1650,
   forward_agent: true,
   keys: [File.join(ENV["HOME"], ".ssh", "id_rsa")]

@@ -6,6 +6,10 @@ set :repo_url, 'git@github.com:estensland/stens_blog.git'
 set :rbenv_ruby, '2.1.2'
 set :port, 1650
 
+set :ssh_options, {
+  port: 1650
+}
+
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
@@ -44,7 +48,7 @@ namespace :deploy do
       execute "service thin restart"  ## -> line you should add
     end
   end
-  
+
   after :publishing, :restart
 
   after :restart, :clear_cache do

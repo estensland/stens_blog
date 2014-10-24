@@ -55,7 +55,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'capistrano', '~> 3.1'
-gem 'capistrano-bundler'
-gem 'capistrano-rails'
-gem 'capistrano-rbenv', '~> 2.0'
+group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv', '~> 2.0', require: false
+end

@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'ericrstensland'
-set :repo_url, 'git@github.com:estensland/stens_blog.git'
+# set :repo_url, 'git@github.com:estensland/stens_blog.git'
 set :rbenv_ruby, '2.1.2'
 set :port, 1650
 

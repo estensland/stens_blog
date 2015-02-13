@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
@@ -47,7 +47,7 @@ group :development, :test do
   gem 'xray-rails'
 end
 
-group :production do 
+group :production do
   gem 'rails_12factor'
 end
 

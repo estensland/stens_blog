@@ -1,3 +1,3 @@
 == My Personal Site
 
-Pretty basic...info and blog. Currently up on Heroku but hoping to move it to my own server
+Pretty basic...info and blog. Currently moving it to my own server

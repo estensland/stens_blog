@@ -12,7 +12,7 @@ require 'mina/unicorn'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain, '104...'
+set :domain, '104.131.94.171'
 set :deploy_to, '/home/deploy/stens_blog/'
 set :repository, 'https://github.com/estensland/stens_blog'
 set :branch, 'master'
@@ -63,7 +63,7 @@ task :deploy => :environment do
   deploy do
 
     # stop accepting new workers
-    invoke :'sidekiq:quiet'
+    # invoke :'sidekiq:quiet'
 
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'

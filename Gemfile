@@ -37,6 +37,9 @@ gem 'thin'
 
 gem 'font-awesome-rails'
 
+gem 'mina'
+gem 'mina-unicorn', :require => false
+
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'

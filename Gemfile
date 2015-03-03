@@ -37,6 +37,8 @@ gem 'thin'
 
 gem 'font-awesome-rails'
 
+gem 'unicorn'
+
 gem 'mina'
 gem 'mina-unicorn', :require => false
 

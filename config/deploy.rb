@@ -44,6 +44,9 @@ task :setup => :environment do
   queue! %[mkdir -p "#{deploy_to}/shared/sockets"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/sockets"]
 
+  queue! %[mkdir -p "#{deploy_to}/shared/test"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/test"]
+
   queue! %[mkdir -p "#{deploy_to}/shared/log"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]
 

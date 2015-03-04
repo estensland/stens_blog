@@ -27,6 +27,8 @@ set :shared_paths, ['config/database.yml', 'log', 'config/secrets.yml']
 
 # This task is the environment that is loaded for most commands, such as
 # `mina deploy` or `mina rake`.
+put "asdasdasdasdasdasd"
+
 task :environment do
   queue %{
 echo "-----> Loading environment"
@@ -41,11 +43,11 @@ end
 # For Rails apps, we'll make some of the shared paths that are shared between
 # all releases.
 task :setup => :environment do
-  queue! %[mkdir -p "#{deploy_to}/shared/sockets"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/sockets"]
-
   queue! %[mkdir -p "#{deploy_to}/shared/test"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/test"]
+
+  queue! %[mkdir -p "#{deploy_to}/shared/sockets"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/sockets"]
 
   queue! %[mkdir -p "#{deploy_to}/shared/log"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]

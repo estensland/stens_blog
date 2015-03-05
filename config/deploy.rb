@@ -1,87 +1,61 @@
-# http://blog.mccartie.com/2014/08/28/digital-ocean.html
+require 'capistrano/bundler'
+require 'capistrano/rails'
 
-require 'mina/bundler'
-require 'mina/rails'
-require 'mina/git'
-require 'mina/rbenv'
-require 'mina/unicorn'
+# If you are using rbenv add these lines:
+require 'capistrano/rbenv'
+# set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, '2.1.5'
 
-# Basic settings:
-#   domain       - The hostname to SSH to.
-#   deploy_to    - Path to deploy into.
-#   repository   - Git repo to clone from. (needed by mina/git)
-#   branch       - Branch name to deploy. (needed by mina/git)
+# config valid only for Capistrano 3.1
+lock '3.1.0'
 
-set :domain, '104.131.94.171'
-set :deploy_to, '/home/deploy/stens_blog/'
-set :repository, 'https://github.com/estensland/stens_blog'
-set :branch, 'master'
-set :user, 'deploy'
-set :forward_agent, true
-set :port, '22'
-set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
+set :application, 'stens_blog'
+set :repo_url, 'git@github.com:estensland/stens_blog.git'
 
-# Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
-# They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['config/database.yml', 'log', 'config/secrets.yml']
+set :deploy_to, '/home/deploy/stens_blog'
 
-# This task is the environment that is loaded for most commands, such as
-# `mina deploy` or `mina rake`.
-put "asdasdasdasdasdasd"
+set :linked_files, %w{config/database.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
-task :environment do
-  queue %{
-echo "-----> Loading environment"
-#{echo_cmd %[source ~/.bashrc]}
-}
-  invoke :'rbenv:load'
-  # If you're using rbenv, use this to load the rbenv environment.
-  # Be sure to commit your .rbenv-version to your repository.
-end
+# Default branch is :master
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-# Put any custom mkdir's in here for when `mina setup` is ran.
-# For Rails apps, we'll make some of the shared paths that are shared between
-# all releases.
-task :setup => :environment do
-  queue! %[mkdir -p "#{deploy_to}/shared/test"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/test"]
+# Default deploy_to directory is /var/www/my_app
+# set :deploy_to, '/var/www/my_app'
 
-  queue! %[mkdir -p "#{deploy_to}/shared/sockets"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/sockets"]
+# Default value for :scm is :git
+# set :scm, :git
 
-  queue! %[mkdir -p "#{deploy_to}/shared/log"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]
+# Default value for :format is :pretty
+# set :format, :pretty
 
-  queue! %[mkdir -p "#{deploy_to}/shared/config"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/config"]
+# Default value for :log_level is :debug
+# set :log_level, :debug
 
-  queue! %[touch "#{deploy_to}/shared/config/database.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
+# Default value for :pty is false
+# set :pty, true
 
-  queue! %[touch "#{deploy_to}/shared/config/secrets.yml"]
-  queue %[echo "-----> Be sure to edit 'shared/config/secrets.yml'."]
+# Default value for :linked_files is []
+# set :linked_files, %w{config/database.yml}
 
-  # sidekiq needs a place to store its pid file and log file
-  queue! %[mkdir -p "#{deploy_to}/shared/pids/"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/pids"]
-end
+# Default value for linked_dirs is []
+# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
-desc "Deploys the current version to the server."
-task :deploy => :environment do
-  deploy do
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
-    # stop accepting new workers
-    # invoke :'sidekiq:quiet'
+# Default value for keep_releases is 5
+# set :keep_releases, 5
 
-    invoke :'git:clone'
-    invoke :'deploy:link_shared_paths'
-    invoke :'bundle:install'
-    invoke :'rails:db_migrate'
-    invoke :'rails:assets_precompile'
+namespace :deploy do
 
-    to :launch do
-      # invoke :'sidekiq:restart'
-      invoke :'unicorn:restart'
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
     end
   end
+
+  after :publishing, 'deploy:restart'
+  after :finishing, 'deploy:cleanup'
 end

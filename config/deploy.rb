@@ -9,8 +9,6 @@ set :rbenv_ruby, '2.1.5'
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-ssh_options[:forward_agent] = true
-
 set :application, 'stens_blog'
 set :repo_url, 'git@github.com:estensland/stens_blog.git'
 

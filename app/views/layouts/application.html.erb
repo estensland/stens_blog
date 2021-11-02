@@ -1,67 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ericrstensland</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Ericrstensland</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<% unless @blog_view %>
+    <navbar class="nav">
+      <div class="white_space"></div>
+      <div class="top-bar">
+        <div class="title">
+          <div class="title_text">
+            <h1>Eric Stensland</h1>
+            <%= image_tag "Eric_smaller.jpg" %>
+            <br>
+            <h2>Web Developer</h2>
+            <br>
+            <h4 class="links">
+              <a href="/">Home</a> |
+              <a href="/about">About</a> |
+              <a href="/contact">Links</a> |
+              <a href="/posts">Blog</a>
+            </h4>
+           </div>
+         </div>
+      </div>
+    </navbar>
 
-<navbar class="nav">
-  <div class="white_space"></div>
-  <div class="top-bar">
-    <div class="title">
-      <div class="title_text">
-        <h1>Eric Stensland</h1>
-        <%= image_tag "Eric_smaller.jpg" %>
-        <br>
-        <h2>Web Developer</h2>
-        <br>
-        <h4 class="links">
-          <a href="/">Home</a> |
-          <a href="/about">About</a> |
-          <a href="/contact">Links</a> |
-          <a href="/posts">Blog</a>
-        </h4>
-       </div>
-     </div>
-  </div>
-</navbar>
-<div class="content">
-<% else %>
-<navbar class="nav">
-  <div class="white_space blog_space"></div>
-  <div class="top-bar blog">
-    <div class="title">
-      <div class="title_text">
-        <h4 class="links">
-          <a href="/">Home</a>|
-          <a href="/contact">Links</a> |
-          <a href="/posts">Recent Posts</a>|
-          <a href="/archive">Archive</a>|
-          <a href="/tags"> Tags</a>
-        </h4>
-       </div>
-     </div>
-  </div>
-</navbar>
-<h1 class="name_blog">Eric Stensland's River of Consciousness</h1>
-<div class="content blog_content">
-<% end %>      
-    
-<%= yield %>
-</div>
+    <div class="content">
+      <%= yield %>
+    </div>
 
-<div id= "find_out_more" class="sub_content">
-  <h4 class="icons">
-    <a target="_blank" href="http://www.github.com/estensland/"><i class="fa fa-github fa-2x"></i></a>
-    <a target="_blank" href="http://www.twitter.com/stens688/"><i class="fa fa-twitter fa-2x"></i></a>
-    <a target="_blank" href="http://www.linkedin.com/in/ericstensland/"><i class="fa fa-linkedin fa-2x"></i></a>  
-  </h4>  
-</div>
+    <div id= "find_out_more" class="sub_content">
+      <h4 class="icons">
+        <a target="_blank" href="http://www.github.com/estensland/"><i class="fa fa-github fa-2x"></i></a>
+        <a target="_blank" href="http://www.twitter.com/stens688/"><i class="fa fa-twitter fa-2x"></i></a>
+        <a target="_blank" href="http://www.linkedin.com/in/ericstensland/"><i class="fa fa-linkedin fa-2x"></i></a>
+      </h4>
+    </div>
 
-</body>
+  </body>
+
 </html>
